@@ -15,7 +15,7 @@
 ## Getting Started
 
 This is a vscode extension supports enhanced JSON syntax (is called as `jsonp`)
-which is used by [python-jsonpreprocessor](https://github.com/test-fullautomation/python-jsonpreprocessor) package.
+which is provided by [python-jsonpreprocessor](https://github.com/test-fullautomation/python-jsonpreprocessor) package.
 
 ### How to install
 This extension is currently not available on 
