@@ -1,0 +1,33 @@
+{
+  "name": "jsonp",
+  "displayName": "JSON with python-jsonpreprocessor",
+  "description": "Provides syntax highlighting & bracket matching in JSONP files.",
+  "version": "0.0.1",
+  "publisher": "test-fullautomation",
+  "engines": {
+    "vscode": "^1.54.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "scripts": {
+    "build": "vsce package"
+  },
+  "contributes": {
+    "languages": [{
+      "id": "jsonp",
+      "aliases": ["jsonp", "json-preprocessor"],
+      "extensions": [".json", ".jsonp"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "jsonp",
+      "scopeName": "source.json.preprocessor",
+      "path": "./syntaxes/JSONP.tmLanguage.json"
+    }]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/test-fullautomation/vscode-jsonp.git"
+  }
+}

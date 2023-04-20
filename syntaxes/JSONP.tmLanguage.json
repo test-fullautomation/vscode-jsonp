@@ -1,0 +1,253 @@
+{
+	"information_for_contributors": [
+		"This file has been converted from https://github.com/microsoft/vscode-JSON.tmLanguage/blob/master/JSON.tmLanguage",
+		"If you want to provide a fix or improvement, please create a pull request against the original repository.",
+		"Once accepted there, we are happy to receive an update request."
+	],
+	"version": "https://github.com/microsoft/vscode-JSON.tmLanguage/commit/9bd83f1c252b375e957203f21793316203f61f70",
+	"name": "JSON with python preprocessor",
+	"scopeName": "source.json.preprocessor",
+	"patterns": [
+		{
+			"include": "#value"
+		}
+	],
+	"repository": {
+		"array": {
+			"begin": "\\[",
+			"beginCaptures": {
+				"0": {
+					"name": "punctuation.definition.array.begin.json.preprocessor"
+				}
+			},
+			"end": "\\]",
+			"endCaptures": {
+				"0": {
+					"name": "punctuation.definition.array.end.json.preprocessor"
+				}
+			},
+			"name": "meta.structure.array.json.preprocessor",
+			"patterns": [
+				{
+					"include": "#value"
+				},
+				{
+					"match": ",",
+					"name": "punctuation.separator.array.json.preprocessor"
+				},
+				{
+					"match": "[^\\s\\]]",
+					"name": "invalid.illegal.expected-array-separator.json.preprocessor"
+				}
+			]
+		},
+		"comments": {
+			"patterns": [
+				{
+					"begin": "/\\*\\*(?!/)",
+					"captures": {
+						"0": {
+							"name": "punctuation.definition.comment.json.preprocessor"
+						}
+					},
+					"end": "\\*/",
+					"name": "comment.block.documentation.json.preprocessor"
+				},
+				{
+					"begin": "/\\*",
+					"captures": {
+						"0": {
+							"name": "punctuation.definition.comment.json.preprocessor"
+						}
+					},
+					"end": "\\*/",
+					"name": "comment.block.json.preprocessor"
+				},
+				{
+					"captures": {
+						"1": {
+							"name": "punctuation.definition.comment.json.preprocessor"
+						}
+					},
+					"match": "(//).*$\\n?",
+					"name": "comment.line.double-slash.js"
+				}
+			]
+		},
+		"constant": {
+			"match": "\\b(?:true|false|null|True|False|None)\\b",
+			"name": "constant.language.json.preprocessor"
+		},
+		"assignment": {
+			"patterns": [
+				{
+					"match": "(\\$)\\{(\\w+)\\}((?:\\[\\'\\w+\\'\\])*)",
+					"captures": {
+					  "1": {
+						 "name": "constant.language.json.preprocessor"
+					  },
+					  "2": {
+						 "name": "constant.language.json.preprocessor"
+					  },
+					  "3": {
+						 "name": "variable.parameter.json.preprocessor"
+					  }
+					}
+				}
+			]
+		},
+		"import": {
+			"match": "\"(\\[import\\])\"",
+			"captures" : {
+				"0" : {
+					"name": "support.type.property-name.json.preprocessor"
+				},
+				"1" : {
+					"name": "constant.language.json.preprocessor"
+				}
+			}
+		},
+		"number": {
+			"match": "(?x)        # turn on extended mode\n  -?        # an optional minus\n  (?:\n    0       # a zero\n    |       # ...or...\n    [1-9]   # a 1-9 character\n    \\d*     # followed by zero or more digits\n  )\n  (?:\n    (?:\n      \\.    # a period\n      \\d+   # followed by one or more digits\n    )?\n    (?:\n      [eE]  # an e character\n      [+-]? # followed by an option +/-\n      \\d+   # followed by one or more digits\n    )?      # make exponent optional\n  )?        # make decimal portion optional",
+			"name": "constant.numeric.json.preprocessor"
+		},
+		"object": {
+			"begin": "\\{",
+			"beginCaptures": {
+				"0": {
+					"name": "punctuation.definition.dictionary.begin.json.preprocessor"
+				}
+			},
+			"end": "\\}",
+			"endCaptures": {
+				"0": {
+					"name": "punctuation.definition.dictionary.end.json.preprocessor"
+				}
+			},
+			"name": "meta.structure.dictionary.json.preprocessor",
+			"patterns": [
+				{
+					"comment": "the JSON object key [import]",
+					"include": "#import"
+				},
+				{
+					"comment": "the JSON object key",
+					"include": "#objectkey"
+				},
+				{
+					"comment": "the JSON object key assignment",
+					"include": "#assignment"
+				},
+				{
+					"include": "#comments"
+				},
+				{
+					"begin": ":",
+					"beginCaptures": {
+						"0": {
+							"name": "punctuation.separator.dictionary.key-value.json.preprocessor"
+						}
+					},
+					"end": "(,)|(?=\\})",
+					"endCaptures": {
+						"1": {
+							"name": "punctuation.separator.dictionary.pair.json.preprocessor"
+						}
+					},
+					"name": "meta.structure.dictionary.value.json.preprocessor",
+					"patterns": [
+						{
+							"comment": "the JSON object value",
+							"include": "#value"
+						},
+						{
+							"match": "[^\\s,]",
+							"name": "invalid.illegal.expected-dictionary-separator.json.preprocessor"
+						}
+					]
+				},
+				{
+					"match": "[^\\s\\}]",
+					"name": "invalid.illegal.expected-dictionary-separator.json.preprocessor"
+				}
+			]
+		},
+		"string": {
+			"begin": "\"",
+			"beginCaptures": {
+				"0": {
+					"name": "punctuation.definition.string.begin.json.preprocessor"
+				}
+			},
+			"end": "\"",
+			"endCaptures": {
+				"0": {
+					"name": "punctuation.definition.string.end.json.preprocessor"
+				}
+			},
+			"name": "string.quoted.double.json.preprocessor",
+			"patterns": [
+				{
+					"include": "#stringcontent"
+				}
+			]
+		},
+		"objectkey": {
+			"begin": "\"",
+			"beginCaptures": {
+				"0": {
+					"name": "punctuation.support.type.property-name.begin.json.preprocessor"
+				}
+			},
+			"end": "\"",
+			"endCaptures": {
+				"0": {
+					"name": "punctuation.support.type.property-name.end.json.preprocessor"
+				}
+			},
+			"name": "string.json.preprocessor support.type.property-name.json.preprocessor",
+			"patterns": [
+				{
+					"include": "#stringcontent"
+				}
+			]
+		},
+		"stringcontent": {
+			"patterns": [
+				{
+					"match": "(?x)                # turn on extended mode\n  \\\\                # a literal backslash\n  (?:               # ...followed by...\n    [\"\\\\/bfnrt]     # one of these characters\n    |               # ...or...\n    u               # a u\n    [0-9a-fA-F]{4}) # and four hex digits",
+					"name": "constant.character.escape.json.preprocessor"
+				},
+				{
+					"match": "\\\\.",
+					"name": "invalid.illegal.unrecognized-string-escape.json.preprocessor"
+				}
+			]
+		},
+		"value": {
+			"patterns": [
+				{
+					"include": "#constant"
+				},
+				{
+					"include": "#number"
+				},
+				{
+					"include": "#string"
+				},
+				{
+					"include": "#array"
+				},
+				{
+					"include": "#object"
+				},
+				{
+					"include": "#comments"
+				},
+				{
+					"include": "#assignment"
+				}
+			]
+		}
+	}
+}
