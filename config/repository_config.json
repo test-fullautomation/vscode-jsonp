@@ -1,0 +1,21 @@
+{
+   "REPOSITORYNAME"             : "vscode-jsonp",
+   "PACKAGENAME"                : "VSCodeJsonp",
+   "PACKAGEVERSION"             : "0.1.0",
+   "PACKAGEDATE"                : "05/2023",
+   "AUTHOR"                     : "to be defined",
+   "AUTHOREMAIL"                : "to be defined",
+   "DESCRIPTION"                : "JSONP extension for VSCode",
+   "LONGDESCRIPTIONCONTENTTYPE" : "text/markdown",
+   "URL"                        : "https://github.com/test-fullautomation/vscode-jsonp",
+   "PROGRAMMINGLANGUAGE"        : "Programming Language :: Python :: 3",
+   "LICENCE"                    : "License :: OSI Approved :: Apache Software License",
+   "OPERATINGSYSTEM"            : "Operating System :: OS Independent",
+   "PYTHONREQUIRES"             : ">=3.0",
+   "DEVELOPMENTSTATUS"          : "Development Status :: 4 - Beta",
+   "INTENDEDAUDIENCE"           : "Intended Audience :: Developers",
+   "TOPIC"                      : "Topic :: Software Development",
+   "INSTALLREQUIRES"            : ["dotdict"],
+   "PACKAGEDATA"                : ["*.pdf"],
+   "PACKAGEDOC"                 : "./packagedoc"
+}

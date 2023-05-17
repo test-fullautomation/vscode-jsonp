@@ -1,93 +1,27 @@
-# jsonp - vscode extension
+# Package Description
 
-## Table of Contents
+## !!! To be taken over from README\_\_ORIG.md !!!
 
--   [Getting Started](#getting-started)
-    -   [How to install](#how-to-install)
--   [Features](#features)
--   [Extension Settings](#extension-settings)
--   [Contribution](#contribution)
--   [Feedback](#feedback)
--   [About](#about)
-    -   [Maintainers](#maintainers)
-    -   [License](#license)
+### Package Documentation
 
-## Getting Started
+A detailed documentation of the **VSCodeJsonp** can be found here:
+[VSCodeJsonp.pdf](https://github.com/test-fullautomation/vscode-jsonp/blob/develop/VSCodeJsonp/VSCodeJsonp.pdf)
 
-This is a vscode extension supports enhanced JSON syntax (is called as `jsonp`)
-which is provided by [python-jsonpreprocessor](https://github.com/test-fullautomation/python-jsonpreprocessor) package.
+### Feedback
 
-### How to install
-This extension is currently not available on 
-[Visual Studio Marketplace](https://marketplace.visualstudio.com/vscode) or
-[Open VSX Registry](https://open-vsx.org/), so you can install it manually as 
-following steps:
-- Get the latest extension `jsonp-x.x.x.vsix` file from this repo.
-- Open [Visual Studio Code](https://code.visualstudio.com/) or 
-[VSCodium](https://vscodium.com/), select **Extensions** Tab then cho 
-**Install from VSIX**
-- Browse to the downloaded `jsonp-x.x.x.vsix` file then install.
+To give us a feedback, you can send an email to [Thomas
+Pollerspöck](mailto:Thomas.Pollerspoeck@de.bosch.com)
 
-As soon as the installtion is completed, the files with `.jsonp` will be 
-recognized properly.
-
-## Features
-
-Besides the [basic JSON syntax](https://www.json.org/), this extension helps
-to recognize and highlight the `jsonp` which includes:
-
-- `"[import]"` syntax:
-
-   ![jsonp-import](./images/jsonp-import.png)
-
-- `param-assignment` syntax:
-
-   ![jsonp-param-assignment](./images/jsonp-param-assignment.png)
-
-With new supported `jsonp` syntax, the JSON value and object syntax are
-updated as below:
-
-- `value`:
-
-   ![jsonp-value](./images/jsonp-value.png)
-
-- `object`:
-
-   ![jsonp-object](./images/jsonp-object.png)
-
-## Extension Settings
-
-When installing this vscode extension successfully, all files with `.jsonp` 
-extension will be automatically highlighted as `jsonp` systax.
-
-In case you want files with `.json` are also recognized as `jsonp` syntax, the
-below setting is required in vscode `settings.json` files:
-```
-"files.associations": {
-   "*.json": "jsonp"
-},
-```
-
-## Contribution
-
-We are always searching support and you are cordially invited to help to
-improve [jsonp](https://github.com/test-fullautomation/jsonp) vscode extension.
-
-## Feedback
-
-Please feel free to give any feedback to us via
-
-Email to: [Robot Framework Support Group](mailto:RobotFrameworkSupportGroup@bcn.bosch.com)
-
-Issue tracking: [vscode-jsonp Issues](https://github.com/test-fullautomation/vscode-jsonp/issues)
-
-## About
+In case you want to report a bug or request any interesting feature,
+please don\'t hesitate to raise a ticket.
 
 ### Maintainers
 
 [Thomas Pollerspöck](mailto:Thomas.Pollerspoeck@de.bosch.com)
 
-[Tran Duy Ngoan](mailto:Ngoan.TranDuy@vn.bosch.com)
+### Contributors
+
+[Thomas Pollerspöck](mailto:Thomas.Pollerspoeck@de.bosch.com)
 
 ### License
 
