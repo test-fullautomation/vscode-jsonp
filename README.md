@@ -1,13 +1,46 @@
-# Package Description
+# jsonp - vscode extension
 
-## !!! To be taken over from README\_\_ORIG.md !!!
+## Table of Contents
 
-### Package Documentation
+-   [Getting Started](#getting-started)
+    -   [How to install](#how-to-install)
+-   [Package Documentation](#package-documentation)
+-   [Feedback](#feedback)
+-   [Maintainers](#maintainers)
+-   [Contributors](#contributors)
+-   [License](#license)
+
+## Getting Started
+
+This is a vscode extension supports enhanced JSON syntax (is called as
+[jsonp]{.title-ref}) which is provided by
+[python-jsonpreprocessor](https://github.com/test-fullautomation/python-jsonpreprocessor)
+package.
+
+### How to install
+
+This extension is currently not available on [Visual Studio
+Marketplace](https://marketplace.visualstudio.com/vscode) or [Open VSX
+Registry](https://open-vsx.org/), so you can install it manually as
+following steps:
+
+-   Get the latest extension [jsonp-x.x.x.vsix]{.title-ref} file from
+    this repo.
+-   Open [Visual Studio Code](https://code.visualstudio.com/) or
+    [VSCodium](https://vscodium.com/), select **Extensions** Tab then
+    chose **Install from VSIX**
+-   Browse to the downloaded [jsonp-x.x.x.vsix]{.title-ref} file then
+    install.
+
+As soon as the installtion is completed, the files with
+[.jsonp]{.title-ref} will be recognized properly.
+
+## Package Documentation
 
 A detailed documentation of the **VSCodeJsonp** can be found here:
 [VSCodeJsonp.pdf](https://github.com/test-fullautomation/vscode-jsonp/blob/develop/VSCodeJsonp/VSCodeJsonp.pdf)
 
-### Feedback
+## Feedback
 
 To give us a feedback, you can send an email to [Thomas
 Pollerspöck](mailto:Thomas.Pollerspoeck@de.bosch.com)
@@ -15,15 +48,17 @@ Pollerspöck](mailto:Thomas.Pollerspoeck@de.bosch.com)
 In case you want to report a bug or request any interesting feature,
 please don\'t hesitate to raise a ticket.
 
-### Maintainers
+## Maintainers
 
 [Thomas Pollerspöck](mailto:Thomas.Pollerspoeck@de.bosch.com)
 
-### Contributors
+[Tran Duy Ngoan](mailto:Ngoan.TranDuy@vn.bosch.com)
 
-[Thomas Pollerspöck](mailto:Thomas.Pollerspoeck@de.bosch.com)
+## Contributors
 
-### License
+[Holger Queckenstedt](mailto:Holger.Queckenstedt@de.bosch.com)
+
+## License
 
 Copyright 2020-2022 Robert Bosch GmbH
 

@@ -62,6 +62,7 @@ class CRepositoryConfig():
         self.__sReferencePath = os.path.dirname(sCalledBy)
 
         self.__dictRepositoryConfig = None # initialized below by json.load()
+        self.__dictPackageConfig = None
 
         # load static configuration values (name of json file is fix)
         sRepositoryConfigurationFile = CString.NormalizePath(f"{self.__sReferencePath}/config/repository_config.json")
@@ -75,6 +76,14 @@ class CRepositoryConfig():
         self.__dictRepositoryConfig['CWD']                         = os.getcwd()
         self.__dictRepositoryConfig['REFERENCEPATH']               = self.__sReferencePath
         self.__dictRepositoryConfig['REPOSITORYCONFIGURATIONFILE'] = sRepositoryConfigurationFile
+
+        # get version of the package from package.json file of extension
+        sPackageConfigurationFile = CString.NormalizePath(f"{self.__sReferencePath}/VSCodeJsonp/package.json")
+        hPackageConfigurationFile = open(sPackageConfigurationFile, encoding="utf-8")
+        self.__dictPackageConfig = json.load(hPackageConfigurationFile)
+        hPackageConfigurationFile.close()
+        self.__dictRepositoryConfig['PACKAGEVERSION'] = self.__dictPackageConfig['version']
+        self.__dictRepositoryConfig['PACKAGEDATE']    = self.__dictPackageConfig['version-date']
 
         # make absolute path to package documentation
         self.__dictRepositoryConfig['PACKAGEDOC'] = CString.NormalizePath(sPath=self.__dictRepositoryConfig['PACKAGEDOC'], sReferencePathAbs=self.__sReferencePath)
