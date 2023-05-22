@@ -3,7 +3,11 @@
   "displayName": "JSON with python-jsonpreprocessor",
   "description": "Provides syntax highlighting & bracket matching in JSONP files.",
   "version": "0.0.1",
+  "version-date": "05.2023",
   "publisher": "test-fullautomation",
+  "author": {
+    "name": "Tran Duy Ngoan"
+  },
   "engines": {
     "vscode": "^1.54.0"
   },
@@ -11,7 +15,7 @@
     "Programming Languages"
   ],
   "scripts": {
-    "build": "vsce package"
+    "build": "vsce package -o .."
   },
   "contributes": {
     "languages": [{
