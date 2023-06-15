@@ -38,22 +38,22 @@ to recognize and highlight the `jsonp` which includes:
 
 - `"[import]"` syntax:
 
-   ![jsonp-import](./images/jsonp-import.png)
+   ![jsonp-import](https://github.com/test-fullautomation/vscode-jsonp/blob/develop/VSCodeJsonp/images/jsonp-import.png?raw=true)
 
 - `param-assignment` syntax:
 
-   ![jsonp-param-assignment](./images/jsonp-param-assignment.png)
+   ![jsonp-param-assignment](https://github.com/test-fullautomation/vscode-jsonp/blob/develop/VSCodeJsonp/images/jsonp-param-assignment.png?raw=true)
 
 With new supported `jsonp` syntax, the JSON value and object syntax are
 updated as below:
 
 - `value`:
 
-   ![jsonp-value](./images/jsonp-value.png)
+   ![jsonp-value](https://github.com/test-fullautomation/vscode-jsonp/blob/develop/VSCodeJsonp/images/jsonp-value.png?raw=true)
 
 - `object`:
 
-   ![jsonp-object](./images/jsonp-object.png)
+   ![jsonp-object](https://github.com/test-fullautomation/vscode-jsonp/blob/develop/VSCodeJsonp/images/jsonp-object.png?raw=true)
 
 ## Extension Settings
 

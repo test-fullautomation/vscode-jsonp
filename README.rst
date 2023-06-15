@@ -30,7 +30,7 @@ Table of Contents
 Getting Started
 ---------------
 
-This is a vscode extension supports enhanced JSON syntax (is called as `jsonp`)
+This is a vscode extension supports enhanced JSON syntax (is called as *jsonp*)
 which is provided by `python-jsonpreprocessor`_ package.
 
 How to install
@@ -39,12 +39,12 @@ How to install
 This extension is currently not available on `Visual Studio Marketplace`_ or
 `Open VSX Registry`_, so you can install it manually as  following steps:
 
-- Get the latest extension `jsonp-x.x.x.vsix` file from this repo.
+- Get the latest extension *jsonp-x.x.x.vsix* file from this repo.
 - Open `Visual Studio Code`_ or `VSCodium`_, select **Extensions** Tab then chose 
   **Install from VSIX**
-- Browse to the downloaded `jsonp-x.x.x.vsix` file then install.
+- Browse to the downloaded *jsonp-x.x.x.vsix* file then install.
 
-As soon as the installtion is completed, the files with `.jsonp` will be 
+As soon as the installtion is completed, the files with *.jsonp* will be 
 recognized properly.
 
 Package Documentation
