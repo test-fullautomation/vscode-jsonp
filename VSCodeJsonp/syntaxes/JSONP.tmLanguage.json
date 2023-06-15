@@ -81,7 +81,7 @@
 		"assignment": {
 			"patterns": [
 				{
-					"match": "(\\$)\\{([\\w\\.]+)\\}((?:\\[\\'\\w+\\'\\])*)",
+					"match": "(\\$)\\{([\\w\\.]+)\\}((?:\\[\\'[\\w+\\.]+\\'\\])*)",
 					"captures": {
 					  "1": {
 						 "name": "constant.language.json.preprocessor"
