@@ -13,7 +13,7 @@
 ## Getting Started
 
 This is a vscode extension supports enhanced JSON syntax (is called as
-[jsonp]{.title-ref}) which is provided by
+*jsonp*) which is provided by
 [python-jsonpreprocessor](https://github.com/test-fullautomation/python-jsonpreprocessor)
 package.
 
@@ -24,16 +24,14 @@ Marketplace](https://marketplace.visualstudio.com/vscode) or [Open VSX
 Registry](https://open-vsx.org/), so you can install it manually as
 following steps:
 
--   Get the latest extension [jsonp-x.x.x.vsix]{.title-ref} file from
-    this repo.
+-   Get the latest extension *jsonp-x.x.x.vsix* file from this repo.
 -   Open [Visual Studio Code](https://code.visualstudio.com/) or
     [VSCodium](https://vscodium.com/), select **Extensions** Tab then
     chose **Install from VSIX**
--   Browse to the downloaded [jsonp-x.x.x.vsix]{.title-ref} file then
-    install.
+-   Browse to the downloaded *jsonp-x.x.x.vsix* file then install.
 
-As soon as the installtion is completed, the files with
-[.jsonp]{.title-ref} will be recognized properly.
+As soon as the installtion is completed, the files with *.jsonp* will be
+recognized properly.
 
 ## Package Documentation
 
