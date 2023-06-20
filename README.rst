@@ -1,4 +1,4 @@
-.. Copyright 2020-2022 Robert Bosch GmbH
+.. Copyright 2020-2023 Robert Bosch GmbH
 
 .. Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
@@ -40,11 +40,11 @@ This extension is currently not available on `Visual Studio Marketplace`_ or
 `Open VSX Registry`_, so you can install it manually as  following steps:
 
 - Get the latest extension *jsonp-x.x.x.vsix* file from this repo.
-- Open `Visual Studio Code`_ or `VSCodium`_, select **Extensions** Tab then chose 
+- Open `Visual Studio Code`_ or `VSCodium`_, select **Extensions** Tab then chose
   **Install from VSIX**
 - Browse to the downloaded *jsonp-x.x.x.vsix* file then install.
 
-As soon as the installtion is completed, the files with *.jsonp* will be 
+As soon as the installtion is completed, the files with *.jsonp* will be
 recognized properly.
 
 Package Documentation
@@ -57,7 +57,7 @@ A detailed documentation of the **VSCodeJsonp** can be found here:
 Feedback
 --------
 
-To give us a feedback, you can send an email to `Thomas Pollerspöck <mailto:Thomas.Pollerspoeck@de.bosch.com>`_ 
+To give us a feedback, you can send an email to `Thomas Pollerspöck <mailto:Thomas.Pollerspoeck@de.bosch.com>`_
 
 In case you want to report a bug or request any interesting feature, please don't hesitate to raise a ticket.
 
@@ -76,7 +76,7 @@ Contributors
 License
 -------
 
-Copyright 2020-2022 Robert Bosch GmbH
+Copyright 2020-2023 Robert Bosch GmbH
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
