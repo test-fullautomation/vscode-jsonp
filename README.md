@@ -12,10 +12,11 @@
 
 ## Getting Started
 
-This is a vscode extension supports enhanced JSON syntax (is called as
-*jsonp*) which is provided by
-[python-jsonpreprocessor](https://github.com/test-fullautomation/python-jsonpreprocessor)
-package.
+**VSCodeJsonp** is a VSCodium extension to support the enhanced JSON
+syntax (*jsonp*) used by packages like the
+[JsonPreprocessor](https://github.com/test-fullautomation/python-jsonpreprocessor)
+and the
+[RobotFramework_Testsuitesmanagement](https://github.com/test-fullautomation/robotframework-testsuitesmanagement).
 
 ### How to install
 
@@ -58,7 +59,7 @@ please don\'t hesitate to raise a ticket.
 
 ## License
 
-Copyright 2020-2022 Robert Bosch GmbH
+Copyright 2020-2023 Robert Bosch GmbH
 
 Licensed under the Apache License, Version 2.0 (the \"License\"); you
 may not use this file except in compliance with the License. You may
