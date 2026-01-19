@@ -35,7 +35,7 @@ following steps:
   chose **Install from VSIX**
 - Browse to the downloaded *jsonp-x.x.x.vsix* file then install.
 
-As soon as the installtion is completed, the files with *.jsonp* will be
+As soon as the installation is completed, the files with *.jsonp* will be
 recognized properly.
 
 ## Features
