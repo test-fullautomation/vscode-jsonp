@@ -96,6 +96,22 @@
 				}
 			]
 		},
+	   "python_inline": {
+		   "name": "meta.embedded.inline.python.json.preprocessor",
+		   "begin": "<<",
+		   "beginCaptures": {
+			   "0": { "name": "punctuation.section.embedded.begin.json.preprocessor" }
+		   },
+		   "end": ">>",
+		   "endCaptures": {
+			   "0": { "name": "punctuation.section.embedded.end.json.preprocessor" }
+		   },
+		   "patterns": [
+			   {
+				   "include": "source.python"
+			   }
+		   ]
+	   },
 		"import": {
 			"match": "\"(\\[import\\])\"",
 			"captures" : {
@@ -246,6 +262,9 @@
 				},
 				{
 					"include": "#assignment"
+				},
+				{
+					"include": "#python_inline"
 				}
 			]
 		}
