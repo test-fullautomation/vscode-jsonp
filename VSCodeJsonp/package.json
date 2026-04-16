@@ -2,8 +2,8 @@
   "name": "jsonp",
   "displayName": "JSON with python-jsonpreprocessor",
   "description": "Provides syntax highlighting & bracket matching in JSONP files.",
-  "version": "0.0.2",
-  "version-date": "01.2026",
+  "version": "0.0.3",
+  "version-date": "04.2026",
   "publisher": "test-fullautomation",
   "author": {
     "name": "Tran Duy Ngoan"
@@ -24,11 +24,18 @@
       "extensions": [".json", ".jsonp"],
       "configuration": "./language-configuration.json"
     }],
-    "grammars": [{
-      "language": "jsonp",
-      "scopeName": "source.json.preprocessor",
-      "path": "./syntaxes/JSONP.tmLanguage.json"
-    }]
+    "grammars": [
+      {
+        "language": "jsonp",
+        "scopeName": "source.json.preprocessor",
+        "path": "./syntaxes/JSONP.tmLanguage.json"
+      },
+      {
+        "scopeName": "source.robot.thread-extension",
+        "path": "./syntaxes/robot-thread.tmLanguage.json",
+        "injectTo": ["source.robot", "source.robotframework"]
+      }
+    ]
   },
   "repository": {
     "type": "git",

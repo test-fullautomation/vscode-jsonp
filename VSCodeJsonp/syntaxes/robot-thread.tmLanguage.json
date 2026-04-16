@@ -1,0 +1,65 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Robot Framework Thread Extension",
+	"scopeName": "source.robot.thread-extension",
+	"injectionSelector": "L:source.robot, L:source.robotframework",
+	"patterns": [
+		{ "include": "#thread-block" },
+		{ "include": "#thread-header" },
+		{ "include": "#end-keyword" }
+	],
+	"repository": {
+		"thread-block": {
+			"name": "meta.block.thread.robot",
+			"begin": "^([ \\t]*)(THREAD)(?:([ \\t]{2,}|\\t)(\\S+))?(?:([ \\t]{2,}|\\t)(True|False|true|false))?[ \\t]*(#.*)?$",
+			"beginCaptures": {
+				"2": { "name": "keyword.control.flow.thread.robot" },
+				"4": { "name": "entity.name.label.thread-name.robot" },
+				"6": { "name": "constant.language.boolean.robot" },
+				"7": { "name": "comment.line.robot" }
+			},
+			"end": "^([ \\t]*)(END)[ \\t]*(#.*)?$",
+			"endCaptures": {
+				"2": { "name": "keyword.control.flow.end.robot" },
+				"3": { "name": "comment.line.robot" }
+			},
+			"patterns": [
+				{ "include": "#thread-block" },
+				{ "include": "#generic-end-block" }
+			]
+		},
+		"generic-end-block": {
+			"name": "meta.block.control.robot",
+			"begin": "^([ \\t]*)(FOR|WHILE|IF|TRY)(?=([ \\t]{2,}|\\t|[ \\t]*$)).*$",
+			"beginCaptures": {
+				"2": { "name": "keyword.control.flow.robot" }
+			},
+			"end": "^([ \\t]*)(END)[ \\t]*(#.*)?$",
+			"endCaptures": {
+				"2": { "name": "keyword.control.flow.end.robot" },
+				"3": { "name": "comment.line.robot" }
+			},
+			"patterns": [
+				{ "include": "#thread-block" },
+				{ "include": "#generic-end-block" }
+			]
+		},
+		"thread-header": {
+			"comment": "Matches:  THREAD   <thread_name>   [True|False]",
+			"match": "^([ \\t]*)(THREAD)(?:([ \\t]{2,}|\\t)(\\S+))?(?:([ \\t]{2,}|\\t)(True|False|true|false))?",
+			"captures": {
+				"2": { "name": "keyword.control.flow.thread.robot" },
+				"4": { "name": "entity.name.label.thread-name.robot" },
+				"6": { "name": "constant.language.boolean.robot" }
+			}
+		},
+		"end-keyword": {
+			"comment": "Matches standalone END keyword  (closes THREAD, FOR, WHILE, IF, TRY blocks)",
+			"match": "^([ \\t]*)(END)[ \\t]*(#.*)?$",
+			"captures": {
+				"2": { "name": "keyword.control.flow.end.robot" },
+				"3": { "name": "comment.line.robot" }
+			}
+		}
+	}
+}
