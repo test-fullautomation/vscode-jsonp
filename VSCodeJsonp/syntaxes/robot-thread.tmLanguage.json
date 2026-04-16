@@ -24,6 +24,7 @@
 				"3": { "name": "comment.line.robot" }
 			},
 			"patterns": [
+				{ "include": "$base" },
 				{ "include": "#thread-block" },
 				{ "include": "#generic-end-block" }
 			]
@@ -40,6 +41,7 @@
 				"3": { "name": "comment.line.robot" }
 			},
 			"patterns": [
+				{ "include": "$base" },
 				{ "include": "#thread-block" },
 				{ "include": "#generic-end-block" }
 			]

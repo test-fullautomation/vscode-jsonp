@@ -1,4 +1,4 @@
-.. Copyright 2020-2023 Robert Bosch GmbH
+.. Copyright 2020-2026 Robert Bosch GmbH
 
 .. Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
@@ -48,7 +48,7 @@ This extension is currently not available on `Visual Studio Marketplace`_ or
   **Install from VSIX**
 - Browse to the downloaded *jsonp-x.x.x.vsix* file then install.
 
-As soon as the installtion is completed, the files with *.jsonp* will be
+As soon as the installation is completed, the files with *.jsonp* will be
 recognized properly.
 
 Feedback
@@ -71,7 +71,7 @@ Maintainers
 License
 -------
 
-Copyright 2020-2022 Robert Bosch GmbH
+Copyright 2020-2026 Robert Bosch GmbH
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at:
 
