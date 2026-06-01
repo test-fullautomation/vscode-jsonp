@@ -1,6 +1,6 @@
 # **************************************************************************************************************
 #
-#  Copyright 2020-2023 Robert Bosch GmbH
+#  Copyright 2020-2026 Robert Bosch GmbH
 #
 #  Licensed under the Apache License, Version 2.0 (the "License");
 #  you may not use this file except in compliance with the License.
@@ -18,7 +18,7 @@
 #
 # CRepositoryConfig.py
 #
-# XC-CT/ECA3-Queckenstedt
+# XC-HWP/ESW3-Queckenstedt
 #
 # Purpose:
 # - Compute and store all repository specific information, like the repository name,
@@ -35,7 +35,6 @@
 
 import os, sys, platform, shlex, subprocess, json
 import colorama as col
-import pypandoc
 
 from PythonExtensionsCollection.String.CString import CString
 
@@ -108,12 +107,9 @@ class CRepositoryConfig():
         sPython         = CString.NormalizePath(sys.executable)
         sPythonVersion  = sys.version
 
-        try:
-            # try to access pandoc; if not installed we detect this already here as early as possible
-            pypandoc.get_pandoc_path()
-        except Exception as ex:
+        if sPlatformSystem not in ("Windows", "Linux"):
             bSuccess = False
-            sResult  = str(ex)
+            sResult  = f"Operating system {sPlatformSystem} ({sOSName}) not supported"
             return bSuccess, sResult
 
         self.__dictRepositoryConfig['OSNAME']                 = sOSName
@@ -123,27 +119,11 @@ class CRepositoryConfig():
 
         # ---- paths relative to repository root folder (where the scripts are located that use this module)
 
-        # ====== 1. documentation
-
-        # - README
-        self.__dictRepositoryConfig['README_RST'] = CString.NormalizePath(f"{self.__sReferencePath}/README.rst")
-        self.__dictRepositoryConfig['README_MD']  = CString.NormalizePath(f"{self.__sReferencePath}/README.md")
-
-        # The following key doesn't matter in case of the documentation builder itself is using this CRepositoryConfig.
-        # But if the documentation builder is called by other apps like setup.py, they need to know where to find.
+        # documentation
         self.__dictRepositoryConfig['DOCUMENTATIONBUILDER'] = CString.NormalizePath(f"{self.__sReferencePath}/genpackagedoc.py")
 
         # - folder containing the package source files (will also contain the PDF documentation)
         self.__dictRepositoryConfig['PACKAGESOURCEFOLDER'] = CString.NormalizePath(f"{self.__sReferencePath}/{self.__dictRepositoryConfig['PACKAGENAME']}")
-
-        # ====== 2. setuptools
-
-        self.__dictRepositoryConfig['SETUPBUILDFOLDER']           = CString.NormalizePath(f"{self.__sReferencePath}/build")
-        self.__dictRepositoryConfig['SETUPBUILDLIBFOLDER']        = CString.NormalizePath(f"{self.__sReferencePath}/build/lib")
-        self.__dictRepositoryConfig['SETUPBUILDLIBPACKAGEFOLDER'] = CString.NormalizePath(f"{self.__sReferencePath}/build/lib/{self.__dictRepositoryConfig['PACKAGENAME']}")
-        self.__dictRepositoryConfig['SETUPDISTFOLDER']            = CString.NormalizePath(f"{self.__sReferencePath}/dist")
-        EGGINFOFOLDER = self.__dictRepositoryConfig['PACKAGENAME'].replace('-', '_')
-        self.__dictRepositoryConfig['EGGINFOFOLDER']              = CString.NormalizePath(f"{self.__sReferencePath}/{EGGINFOFOLDER}.egg-info")
 
         print()
         print(f"Running under {sPlatformSystem} ({sOSName})")
