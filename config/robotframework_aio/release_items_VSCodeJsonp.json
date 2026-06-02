@@ -48,6 +48,7 @@
                    "0.14.4.;0.15.0." : [
 "
 * Added support for python inline syntax highlighting.
+* Added support for robotframework thread extension syntax highlighting.
 "
                                        ]
                  }

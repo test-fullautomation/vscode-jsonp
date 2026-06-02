@@ -21,16 +21,21 @@ Table of Contents
 -  `Getting Started <#getting-started>`__
 
    -  `How to install <#how-to-install>`__
+-  `Features <#features>`__
+-  `Building the Extension <#building-the-extension>`__
+-  `Contribution <#contribution>`__
 -  `Package Documentation <#package-documentation>`__
 -  `Feedback <#feedback>`__
--  `Maintainers <#maintainers>`__
--  `Contributors <#contributors>`__
--  `License <#license>`__
+-  `About <#about>`__
+
+   -  `Maintainers <#maintainers>`__
+   -  `Contributors <#contributors>`__
+   -  `License <#license>`__
 
 Getting Started
 ---------------
 
-**VSCodeJsonp** is a VSCodium extension to support the enhanced JSON syntax (*jsonp*) used by 
+**VSCodeJsonp** is a VSCodium extension to support the enhanced JSON syntax (*jsonp*) used by
 packages like the
 `JsonPreprocessor <https://github.com/test-fullautomation/python-jsonpreprocessor>`_
 and the
@@ -51,12 +56,57 @@ This extension is currently not available on `Visual Studio Marketplace`_ or
 As soon as the installtion is completed, the files with *.jsonp* will be
 recognized properly.
 
+
+Features
+--------
+
+Besides the basic JSON syntax, this extension helps to recognize and highlight the `jsonp` which includes:
+
+- `"[import]"` syntax
+- `param-assignment` syntax
+- Updated `value` and `object` syntax for `jsonp`.
+- Enabled `python inline code` syntax within `jsonp` files.
+
+Extension Settings
+------------------
+
+When installing this vscode extension successfully, all files with `.jsonp` extension will be automatically highlighted as `jsonp` syntax.
+
+In case you want files with `.json` to also be recognized as `jsonp` syntax, the below setting is required in vscode `settings.json` files
+
+.. code::
+
+   "files.associations": {
+      "*.json": "jsonp"
+   }
+
+Building the Extension
+----------------------
+
+To build this extension from source, follow these steps:
+
+1. Ensure you have Node.js and npm installed on your system.
+2. Clone this repository to your local machine.
+3. Navigate to the project directory in your terminal and browse to **VSCodeJsonp** folder.
+4. Run the following commands
+
+.. code::
+
+   npm install
+   npm run build
+
+5. The built `.vsix` file will be available in the project directory.
+
+Contribution
+------------
+
+We are always searching for support and you are cordially invited to help improve this vscode extension.
+
 Package Documentation
 ---------------------
 
 A detailed documentation of the **VSCodeJsonp** can be found here:
 `VSCodeJsonp.pdf <https://github.com/test-fullautomation/vscode-jsonp/blob/develop/VSCodeJsonp/VSCodeJsonp.pdf>`_
-
 
 Feedback
 --------
@@ -65,20 +115,23 @@ To give us a feedback, you can send an email to `Thomas Pollerspöck <mailto:Tho
 
 In case you want to report a bug or request any interesting feature, please don't hesitate to raise a ticket.
 
+About
+-----
+
 Maintainers
------------
+~~~~~~~~~~~
 
 `Thomas Pollerspöck`_
 
 `Tran Duy Ngoan`_
 
 Contributors
-------------
+~~~~~~~~~~~~
 
 `Holger Queckenstedt`_
 
 License
--------
+~~~~~~~
 
 Copyright 2020-2023 Robert Bosch GmbH
 
